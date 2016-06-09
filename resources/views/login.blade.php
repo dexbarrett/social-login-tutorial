@@ -2,11 +2,9 @@
 @section('page-title', 'Please login')
 @section('page-content')
     <div class="row">
-        <div class="col-md-5 col-md-offset-3">
+        <div class="col-md-6 col-md-offset-2">
             @include('partials.flash-messages')
         </div>
-    </div>
-    <div class="row">
         <div class="col-md-8 col-md-offset-1">
             <ul>
                 <li>

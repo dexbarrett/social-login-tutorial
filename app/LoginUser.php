@@ -1,9 +1,8 @@
 <?php
 namespace App;
 
-use App\User;
+use Exception;
 use Socialite;
-use App\SocialLoginProfile;
 use App\Exceptions\SocialAuthException;
 
 class LoginUser
@@ -31,7 +30,7 @@ class LoginUser
 
             auth()->login($user);
             
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             throw new SocialAuthException("failed to authenticate with $provider");
         }
     }
